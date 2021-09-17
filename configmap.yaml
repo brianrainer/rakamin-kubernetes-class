@@ -1,6 +1,6 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: myapp-config
+  name: myapp-config-brian
 data:
   PODINFO_UI_MESSAGE: "Hello from the other side"
