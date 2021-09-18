@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: brian-service
+  labels:
+    app: brian-app
+spec:
+  selector:
+    app: brian-app
+  ports:
+    - protocol: TCP
+      port: 9898
+  type: LoadBalancer

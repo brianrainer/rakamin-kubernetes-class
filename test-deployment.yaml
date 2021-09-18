@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brian-deployment
+  labels:
+    app: brian-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: brian-app
+  template:
+    metadata:
+      labels:
+        app: brian-app
+    spec:
+      containers:
+        - name: brian-container
+          image: ghcr.io/stefanprodan/podinfo:6.0.0
+          envFrom:
+            - configMapRef:
+                name: brian-configmap

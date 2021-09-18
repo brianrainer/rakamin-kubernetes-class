@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: brian-app
+  labels:
+    app: brian-app
+spec:
+  containers:
+    - name: brian-container
+      image: ghcr.io/stefanprodan/podinfo:6.0.0
