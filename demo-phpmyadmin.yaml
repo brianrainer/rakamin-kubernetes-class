@@ -29,7 +29,7 @@ metadata:
   labels:
     app: phpmyadmin-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: phpmyadmin-app
